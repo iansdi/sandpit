@@ -66,6 +66,15 @@ functions:
           method: delete
           cors: true
 
+  getauths:
+    handler: authcheck/checkauth.checkauth
+    events:
+      - http:
+          path: authcheck/{id}
+          method: get
+          cors: true
+
+
 resources:
   Resources:
     TodosDynamoDbTable:
